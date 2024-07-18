@@ -1,0 +1,55 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+#core-consepts{
+  padding: 2rem;
+  border-radius: 6px;
+}
+#core-concepts ul{
+  list-style: none;
+  margin: 100px;
+  box-shadow: 0 0px 30px rgba(220, 169, 49, 1);
+  color:#888;   
+  display: flex;
+  border-radius: 20px 30px 30px 20px;
+}
+#core-concepts li{
+  list-style: none;
+  margin: 2rem;
+  padding: 1rem;
+  font-size: 0.9rem;
+  box-shadow: 0 2px 8px rgba(220, 169, 49, 0.493);
+  background-color: rgba(214, 165, 75, 0.614);
+  color:#200101; 
+  border-radius: 5px;  
+
+}
+#core-concepts h2{
+  margin-bottom: -3rem;
+}
+.logo {
+  height: 40vh;
+  padding: 0em;
+  will-change: filter;
+  transition: filter 300ms;
+  border-radius: 90%;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #c70000a7);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 5em #c70000a7);
+}
+
+
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
