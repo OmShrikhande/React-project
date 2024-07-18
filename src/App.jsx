@@ -4,6 +4,7 @@ import { CORE_CONCEPTS } from './data.js'
 import CoreConcepts from './Components/CoreConcepts.jsx'
 import Header from './Components/Header'
 import './App.css'
+import TabButton from './Components/TabButton.jsx'
 
 
 const reactDesciption = ['Fundamental','Crucial', 'core'] 
@@ -45,6 +46,19 @@ function App() {
           <CoreConcepts title={CORE_CONCEPTS[2].title} description={CORE_CONCEPTS[2].description} image={CORE_CONCEPTS[2].image}/>
           <CoreConcepts /*this is by the spread operator*/{...CORE_CONCEPTS[3]} /> 
         </ul>
+      </section>
+
+      {/* code below is the example of the children Props */}
+      <section id ="TabButton">
+        <h2>Examples</h2>
+        <div id="innertabbutton">
+          <menu>
+            <TabButton>Components</TabButton>
+            <TabButton>JSX</TabButton>
+            <TabButton>children props</TabButton>
+            <TabButton>state</TabButton>
+          </menu>
+        </div>
       </section>
     </>
   )

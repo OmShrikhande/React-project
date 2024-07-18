@@ -44,8 +44,27 @@
   filter: drop-shadow(0 0 5em #c70000a7);
 }
 
+li{
+  list-style: none;
+}
+/* this is for TabButton component */
 
+#TabButton h2{
+  text-align: start;
+}
+#TabButton button{
+ float: left;
+  padding: 0.5em 0em;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  width: 110px;
+  
+}
 
+#TabButton button:hover{
+  color: coral;
+ }
 .card {
   padding: 2em;
 }
