@@ -13,9 +13,23 @@ function genranodm(max){
   return Math.floor(Math.random() * (max + 1));
 }
 
+// 
+
+
+
 function App() {
+
+
   const [count, setCount] = useState(0)
   const description =reactDesciption[genranodm(2)]
+
+  let tabContent = 'please click a button'
+
+
+  function handelSelect(selectedButton){
+    tabContent = selectedButton;
+    console.log(selectedButton);
+  }
 
   return (
     <>
@@ -51,14 +65,16 @@ function App() {
       {/* code below is the example of the children Props */}
       <section id ="TabButton">
         <h2>Examples</h2>
-        <div id="innertabbutton">
+       
           <menu>
-            <TabButton>Components</TabButton>
-            <TabButton>JSX</TabButton>
-            <TabButton>children props</TabButton>
-            <TabButton>state</TabButton>
+            <TabButton onSelect={() => handelSelect('components')}>Components</TabButton>
+            <TabButton onSelect={() => handelSelect('jsx')}>JSX</TabButton>
+            <TabButton onSelect={() => handelSelect('childrenprop')}>children props</TabButton>
+            <TabButton onSelect={() => handelSelect('state')}>state</TabButton>
           </menu>
-        </div>
+{/* passing function handelSelect as a value */}
+         {tabContent}
+       
       </section>
     </>
   )

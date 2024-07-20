@@ -1,18 +1,26 @@
-export default function TabButton(props){
-    return(
-    <li>
-        <button>{props.children}</button>
-    </li>); 
-}
+// export default function TabButton(props){
+//     function handelClick(){
+
+//         console.log("Hello world")
+
+//     }
+
+//     return(
+//     <li>
+//         <button onClick={handelClick}>{props.children}</button>
+//     </li>); 
+// }
+
+
 
 // the code using the destructuring will look like -
-/*
-export default function TabButton({children}){
+
+export default function TabButton({children,onSelect}){
+
     return(
     <li>
-        <button>{children}</button>
+        <button onClick={onSelect}>{children}</button>
     </li>); 
 }
 
-the above written code also does the same work that is done by the first one.
-*/
+// the above written code also does the same work that is done by the first one.
