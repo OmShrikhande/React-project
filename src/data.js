@@ -29,3 +29,34 @@ export const CORE_CONCEPTS = [
       'React-managed data which, when changed, causes the component to re-render & the UI to update.',
   },
 ];
+
+export const Example ={
+  components :{
+    title: 'Components',
+    description: 'This is an example of a React component',
+    code : `function Welcome(){
+      return <h1> Components </h1>
+    }`,
+  },
+  jsx :{
+    title: 'Components',
+    description: 'This is an example of a React component',
+    code : `function Welcome(){
+      return <h1> Components </h1>
+    }`,
+  },
+  props :{
+    title: 'Components',
+    description: 'This is an example of a React component',
+    code : `function Welcome(){
+      return <h1> Components </h1>
+    }`,
+  },
+  state :{
+    title: 'Components',
+    description: 'This is an example of a React component',
+    code : `function Welcome(){
+      return <h1> Components </h1>
+    }`,
+  }
+}
