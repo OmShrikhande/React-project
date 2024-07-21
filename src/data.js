@@ -39,21 +39,21 @@ export const Example ={
     }`,
   },
   jsx :{
-    title: 'Components',
+    title: 'JSX',
     description: 'This is an example of a React component',
     code : `function Welcome(){
       return <h1> Components </h1>
     }`,
   },
-  props :{
-    title: 'Components',
+  childrenprop :{
+    title: 'Props',
     description: 'This is an example of a React component',
     code : `function Welcome(){
       return <h1> Components </h1>
     }`,
   },
   state :{
-    title: 'Components',
+    title: 'State',
     description: 'This is an example of a React component',
     code : `function Welcome(){
       return <h1> Components </h1>

@@ -49,6 +49,10 @@ li{
   list-style: none;
 }
 /* this is for TabButton component */
+#TabButton{
+  flex: none;
+}
+
 
 #TabButton h2{
   text-align: start;
@@ -73,4 +77,14 @@ li{
 
 .read-the-docs {
   color: #888;
+}
+#TabContent{
+  display: flex;
+  text-align: left;
+  flex-direction: column;
+  width: 60%;
+  height: auto;
+  margin-top: 7%;
+  padding: 2%;
+  border: 3px solid red;
 }

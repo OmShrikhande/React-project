@@ -1,10 +1,14 @@
 import { useState } from 'react'
 import be from './assets/black-eagle.jpg'
-import { CORE_CONCEPTS } from './data.js'
+import { CORE_CONCEPTS,
+  Example, 
+
+} from './data.js'
 import CoreConcepts from './Components/CoreConcepts.jsx'
 import Header from './Components/Header'
 import './App.css'
 import TabButton from './Components/TabButton.jsx'
+// import {Example} from './data.js'
 
 
 const reactDesciption = ['Fundamental','Crucial', 'core'] 
@@ -13,22 +17,15 @@ function genranodm(max){
   return Math.floor(Math.random() * (max + 1));
 }
 
-// 
-
-
-
 function App() {
 
-
-  const [count, setCount] = useState(0)
+  let [SelectedTopic, setSelectedTopic] = useState('components')
+  // const [count, setCount] = useState(0)
   const description =reactDesciption[genranodm(2)]
-
-  let tabContent = 'please click a button'
-
-
+  
   function handelSelect(selectedButton){
-    tabContent = selectedButton;
-    console.log(selectedButton);
+       setSelectedTopic(selectedButton)
+    // console.log(selectedButton);
   }
 
   return (
@@ -36,9 +33,9 @@ function App() {
       <Header />
       <h1>Om Shrikhande</h1>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
+        {/* <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
-        </button>
+        </button> */}
         <p>
          This is react {description} the app made by Mr. Om Shrikhande this is his first app
         </p>
@@ -73,8 +70,14 @@ function App() {
             <TabButton onSelect={() => handelSelect('state')}>state</TabButton>
           </menu>
 {/* passing function handelSelect as a value */}
-         {tabContent}
-       
+        <div id="TabContent">
+         {/* using the selected topic to get the corresponding example */}
+         <h3>{Example[SelectedTopic].title}</h3>
+         <p>{Example[SelectedTopic].description}</p>
+         <pre>
+          <code>{Example[SelectedTopic].code}</code>
+         </pre>
+        </div>
       </section>
     </>
   )
