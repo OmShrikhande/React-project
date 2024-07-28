@@ -59,15 +59,22 @@ function App() {
         </ul>
       </section>
 
+      <section id="core-concepts">
+        <h2>Dynamic Core Concepts with Data.js </h2>
+        <ul>
+        {CORE_CONCEPTS.map((conceptItem)=><CoreConcepts key={conceptItem.title} {...conceptItem}/> )}
+        </ul>
+      </section>
+
       {/* code below is the example of the children Props */}
       <section id ="TabButton">
         <h2>Examples</h2>
        
           <menu>
-            <TabButton onSelect={() => handelSelect('components')}>Components</TabButton>
-            <TabButton onSelect={() => handelSelect('jsx')}>JSX</TabButton>
-            <TabButton onSelect={() => handelSelect('childrenprop')}>children props</TabButton>
-            <TabButton onSelect={() => handelSelect('state')}>state</TabButton>
+            <TabButton isSelected={SelectedTopic==='components'} onSelect={() => handelSelect('components')}>Components</TabButton>
+            <TabButton isSelected={SelectedTopic==='childrenprop'} onSelect={() => handelSelect('childrenprop')}>children props</TabButton>
+            <TabButton isSelected={SelectedTopic==='jsx'} onSelect={() => handelSelect('jsx')}>JSX</TabButton>
+            <TabButton isSelected={SelectedTopic==='state'} onSelect={() => handelSelect('state')}>state</TabButton>
           </menu>
 {/* passing function handelSelect as a value */}
         <div id="TabContent">
