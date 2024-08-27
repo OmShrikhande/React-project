@@ -2,7 +2,6 @@ import { useState } from 'react'
 import be from './assets/black-eagle.jpg'
 import { CORE_CONCEPTS,
   Example, 
-
 } from './data.js'
 import CoreConcepts from './Components/CoreConcepts.jsx'
 import Header from './Components/Header'
