@@ -41,7 +41,7 @@
 .logo:hover {
   filter: drop-shadow(0 0 2em #c70000a7);
 }
-.logo.react:hover {
+.logo.react:hover 
   filter: drop-shadow(0 0 5em #c70000a7);
 }
 
