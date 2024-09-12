@@ -52,7 +52,7 @@ li{
 /* this is for TabButton component */
 #TabButton{
   flex: none;
-
+}
 
 #TabButton h2{
   text-align: start;
